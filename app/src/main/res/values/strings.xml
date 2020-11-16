@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Country Game</string>
     <string name="start_game">Start</string>
+    <string name="question1">Грозный столица РФ?</string>
+    <string name="True">Правда</string>
+    <string name="False">Неправда</string>
 </resources>
