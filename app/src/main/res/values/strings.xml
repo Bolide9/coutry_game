@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Country Game</string>
     <string name="start_game">Start</string>
-    <string name="question1">Грозный столица РФ?</string>
-    <string name="True">Правда</string>
-    <string name="False">Неправда</string>
+
+    //Quections
+    <string name="question1">Грозный столица России?</string>
+    <string name="question2">Москва столица России?</string>
+    <string name="question3">Лондон столица Англии?</string>
+    <string name="question4">Вашингтон столица США?</string>
+    <string name="question5">Берлин столица Германии?</string>
+    <string name="question6">Париж столица Польши?</string>
+
+
+    //Answers
+    <string name="True">TRUE</string>
+    <string name="False">FALSE</string>
 </resources>
