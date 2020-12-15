@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack2"
+    tools:context=".QuestionsActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="120dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-16dp" />
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/buttonPrevios"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_true_style"
+            android:onClick="previosQuections"
+            android:text="@string/Previous"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="335dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_true_style"
+            android:onClick="onClick2"
+            android:text="@string/False"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="254dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_true_style"
+            android:onClick="onClick"
+            android:text="@string/True"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="254dp" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_true_style"
+            android:onClick="nextQuections"
+            android:text="@string/Next"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="335dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

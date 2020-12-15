@@ -1,7 +1,6 @@
 package com.example.country_game;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,6 +19,8 @@ public class QuestionsActivity extends AppCompatActivity {
             new QuectionModel(R.string.question5, true),
             new QuectionModel(R.string.question6, false),
     };
+
+    Toast toast;
 
     TextView mQuectionText;
 
@@ -42,7 +43,6 @@ public class QuestionsActivity extends AppCompatActivity {
     }
 
     public void checkAnswer(boolean userAnswer){
-        Toast toast;
 
         if(mQuections[mCurrentIndex].ismAnswer() == userAnswer) {
             toast = Toast.makeText( this, "Правильный ответ!", Toast.LENGTH_SHORT);
@@ -50,12 +50,38 @@ public class QuestionsActivity extends AppCompatActivity {
         else{
             toast = Toast.makeText(this, "Неверный ответ!", Toast.LENGTH_SHORT);
         }
+
         toast.show();
-        updateQuetion();
+        mCurrentIndex++;
+        updateQuestion(mCurrentIndex);
     }
 
-    public void updateQuetion(){
-        mCurrentIndex++;
-        mQuectionText.setText(mQuections[mCurrentIndex].getmQuectionId());
+    public void updateQuestion(int index){
+        TextView mQuectionText = (TextView)findViewById(R.id.textView);
+        mQuectionText.setText(mQuections[index].getmQuectionId());
     }
-}               
+
+    public void previosQuections(View view){
+        if(mCurrentIndex != 0){
+            mCurrentIndex--;
+            updateQuestion(mCurrentIndex);
+
+            return;
+        }
+        else {
+            toast = Toast.makeText(this,"Первый вопрос!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
+    }
+
+    public void nextQuections(View view){
+        if(mCurrentIndex == 5){
+            mCurrentIndex = -1;
+            return;
+        }
+        mCurrentIndex++;
+        updateQuestion(mCurrentIndex);
+        return;
+    }
+}

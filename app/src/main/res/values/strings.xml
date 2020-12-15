@@ -12,6 +12,10 @@
 
 
     //Answers
-    <string name="True">TRUE</string>
-    <string name="False">FALSE</string>
+    <string name="True">Верно</string>
+    <string name="False">Не верно</string>
+
+    //Buttons
+    <string name="Next">Вперед</string>
+    <string name="Previous">Назад</string>
 </resources>
